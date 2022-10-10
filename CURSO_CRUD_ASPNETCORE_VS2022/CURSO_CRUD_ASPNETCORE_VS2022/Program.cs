@@ -6,10 +6,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+#region NUESTRA INYECCION DE DEPENDENCIA DE ACCESO A TODOS LOS CONTROLADORES 
+/* ESTA ES NUESTRA PRIMER INYECCION DE DEPENDENCIA PARA TENER ACCESO A TODOS NUESTROS CONTROLADORES */
+
 builder.Services.AddDbContext<BD_PubContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("PubContext"));
-})
+}); 
+#endregion
 
 var app = builder.Build();
 
