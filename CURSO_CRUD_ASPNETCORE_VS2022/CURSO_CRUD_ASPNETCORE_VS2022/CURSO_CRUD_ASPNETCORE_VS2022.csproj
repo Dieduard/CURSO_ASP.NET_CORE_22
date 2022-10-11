@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Documento_Curso\" />
+  </ItemGroup>
+
 </Project>

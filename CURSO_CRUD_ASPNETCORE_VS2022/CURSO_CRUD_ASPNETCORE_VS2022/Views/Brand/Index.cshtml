@@ -1,0 +1,24 @@
+﻿@model List<CURSO_CRUD_ASPNETCORE_VS2022.Models.Brand>
+
+    <h1>Marcas de Cervezas </h1>
+    <table class="table">
+        <thead>
+        <!-- AQUI VAMOS A TENER EL ENCABEZADO DE LA TABLA DE DATOS -->
+            <tr> 
+                <th>Nombre </th>
+                <th>Distribuidor </th>
+                <th>Año </th>
+            </tr>
+        </thead>
+        <!-- FORMA DE RECORRER LA LISTA DE DATOS Y COMO MOSTRARLOS -->
+        <tbody>
+            @foreach (var brand in Model) /* Forma de Recorrer mi lista de Datos con el FOREACH*/
+        {
+            <tr>
+                <td>@Html.DisplayFor(m=>brand.Name)</td>
+                <td>@Html.DisplayFor(m=>brand.Distributor)</td>
+                <td>@Html.DisplayFor(m=>brand.Año)</td>
+            </tr>
+        }
+        </tbody>
+    </table>

@@ -15,6 +15,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\diego\source\repos\CURSO_ASP.NET_CORE_22\CURSO_CRUD_ASPNETCORE_VS2022\CURSO_CRUD_ASPNETCORE_VS2022
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/diego/source/repos/CURSO_ASP.NET_CORE_22/CURSO_CRUD_ASPNETCORE_VS2022/CURSO_CRUD_ASPNETCORE_VS2022/Views/Beer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmVlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/CURSO_ASP.NET_CORE_22/CURSO_CRUD_ASPNETCORE_VS2022/CURSO_CRUD_ASPNETCORE_VS2022/Views/Brand/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/diego/source/repos/CURSO_ASP.NET_CORE_22/CURSO_CRUD_ASPNETCORE_VS2022/CURSO_CRUD_ASPNETCORE_VS2022/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
