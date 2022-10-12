@@ -1,5 +1,27 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model List<Beer>
+
+<h1>Cervezas </h1>
+<p>
+    <a asp-action="create">Crear</a>  <!-- asp-action = SON PROPIEDADES QUE VIENEN DE ASP.NET-->
+</p>
+<table class="table">
+    <thead>
+        <!-- AQUI VAMOS A TENER EL ENCABEZADO DE LA TABLA DE DATOS -->
+        <tr>
+            <th>Bebida </th>
+            <th>Marca </th>
+            <th></th>
+        </tr>
+    </thead>
+    <!-- FORMA DE RECORRER LA LISTA DE DATOS Y COMO MOSTRARLOS -->
+    <tbody>
+        @foreach (var beer in Model) /* Forma de Recorrer mi lista de Datos con el FOREACH*/
+        {
+            <tr>
+                <td>@Html.DisplayFor(m=>beer.Name)</td>
+                <td>@Html.DisplayFor(m=>beer.Brand.Name)</td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>

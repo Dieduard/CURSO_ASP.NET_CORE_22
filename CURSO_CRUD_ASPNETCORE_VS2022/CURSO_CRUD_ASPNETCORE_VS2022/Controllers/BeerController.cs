@@ -1,5 +1,6 @@
 ﻿using CURSO_CRUD_ASPNETCORE_VS2022.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace CURSO_CRUD_ASPNETCORE_VS2022.Controllers
@@ -21,9 +22,17 @@ namespace CURSO_CRUD_ASPNETCORE_VS2022.Controllers
 
         #region Forma de Mostrar la lista de Nuestros Datos en ASP .NET
         public async Task<IActionResult> Index()
-        {    /* En este caso _CONTEXT = la Base de Datos, BRANDS = La tabla,ToListAsync = Lista de Objetos de tabla Brands */
-            return View(await _context.Beers.ToListAsync());
+        {    /* En este caso _CONTEXT = la Base de Datos, BEERS = La tabla,ToListAsync = Lista de Objetos de tabla BEERS */
+            var beers = _context.Beers.Include(b => b.Brand);
+            return View(await beers.ToListAsync());
         }
         #endregion
+
+        public IActionResult Create()
+        {
+            /*Forma de agregar los Datos a la Base de Datos */
+            ViewData["Brands"] = new SelectList(_context.Brands, "BrandId", "Name"); /*Forma en la que puede acceder a mi BD con VIEWDATA */
+            return View();
+        }
     }
 }
